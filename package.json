@@ -7,7 +7,7 @@
     "dev": "vite dev",
     "lint": "eslint src/*",
     "prettier": "prettier --write .",
-    "prepare": "husky install",
+    "prepare": "git init && husky install",
     "husky": "husky add .husky/pre-commit \"pnpm lint-staged\""
   },
   "lint-staged": {
