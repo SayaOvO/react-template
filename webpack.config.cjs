@@ -1,6 +1,9 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const devMode = process.env.NODE_ENV !== "production";
 
 /**
  * @type {webpack.Configuration}
@@ -13,6 +16,18 @@ const config = {
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+        ],
+      },
       {
         test: /\.tsx?$/,
         use: {
@@ -32,22 +47,10 @@ const config = {
           },
         },
       },
-      {
-        test: /\.css$/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-            },
-          },
-        ],
-      },
     ],
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: [".ts", ".tsx", ".js", ".css"],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -65,7 +68,7 @@ const config = {
         </html>
         `,
     }),
-  ],
+  ].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
   devServer: {
     static: "./dist",
     compress: true,
