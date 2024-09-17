@@ -35,7 +35,7 @@ const config = {
           options: {
             jsc: {
               parser: {
-                syntax: "ecmascript",
+                syntax: "typescript",
                 jsx: true,
               },
               transform: {

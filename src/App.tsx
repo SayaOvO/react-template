@@ -1,7 +1,5 @@
 import * as styles from "./App.module.css";
 
 export default function App() {
-  return (
-    <p className={styles['container']}>Learn React hard :)</p>
-  )
+  return <h1 className={styles["container"]}>Learn React hard :)</h1>;
 }
