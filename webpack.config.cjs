@@ -117,7 +117,7 @@ const config = {
       : [new WebpackBarPlugin()],
   ),
   resolve: {
-    extensions: [".ts", ".tsx", ".js", "jsx", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
     cache: true,
     unsafeCache: false,
     conditionNames: ["import", "require", "default"],

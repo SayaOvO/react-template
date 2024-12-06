@@ -10,8 +10,8 @@
     "lint": "eslint ./src/**"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint-react/eslint-plugin": "^1.14.1",
@@ -20,8 +20,8 @@
     "@swc/core": "^1.7.26",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.5.5",
-    "@types/react": "^18.3.6",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "@typescript-eslint/parser": "^8.5.0",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
@@ -43,5 +43,6 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0",
     "webpackbar": "^6.0.1"
-  }
+  },
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
 }
